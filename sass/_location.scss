@@ -1,0 +1,24 @@
+.location{
+    margin-top: 80px;
+    background: {
+        image: url("../../images/map/bg-map.jpg");
+        size: cover;
+        repeat: no-repeat;
+    }
+    .heading{
+        padding: 50px 0px;
+        h3{
+            color: $primaryColor;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        h3::after{
+            @extend %after-line;
+        }
+        .mdi{
+            color: $primaryColor;
+            font-size: convertFont(40);
+            margin-bottom: 10px;
+        }
+    }
+}

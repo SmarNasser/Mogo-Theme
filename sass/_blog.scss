@@ -1,0 +1,103 @@
+.blog {
+    padding-top: 80px;
+    .heading {
+        h3::after {
+            @extend %after-line;
+        }
+    }
+    &-content {
+        article {
+            max-width: 380px;
+            margin: 0 auto;
+        }
+        .blog-item {
+            padding-top: 35px;
+            .blog-image {
+                position: relative;
+            }
+            .blog-date {
+                font: {
+                    size: convertFont(28);
+                    weight: 700;
+                }
+                background-color: $secondaryColor;
+                color: white;
+                // width: 60px;
+                // height: 70px;
+                padding: 10px 15px;
+                position: absolute;
+                bottom: 5%;
+                left: -4%;
+                transform: translateX(6%);
+                span {
+                    display: block;
+                    font: {
+                        weight: 300;
+                        size: convertFont(13);
+                        style: italic;
+                    }
+                }
+            }
+            .blog-info {
+                position: relative;
+                padding: 20px 0px;
+                h5 {
+                    font: {
+                        size: convertFont(15);
+                        weight: 500;
+                    }
+                    padding-bottom: 5px;
+                }
+            }
+            .blog-info::after {
+                content: "";
+                height: 2px;
+                width: 100%;
+                background-color: #f5f5f5;
+                border-radius: 25px;
+                position: absolute;
+            }
+            .blog-data{
+                a{
+                    color: grey;
+                    padding-right: 15px;
+                    font: {
+                        style: italic;
+                        weight: 300;
+                    }
+                    .mdi{
+                        color: $secondaryColor;
+                        font-size: convertFont(17);
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .blog {
+        &-content {
+            .blog-item {
+                article {
+                    .blog-date {
+                        font-size: 18px;
+                        padding: 8px 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// @media (max-width: 768px){
+//     .blog{
+//         &-content{
+//             .blog-item{
+//                 .blog-date{
+//                     left: 13%;
+//                 }
+//             }
+//         }
+//     }
+// }

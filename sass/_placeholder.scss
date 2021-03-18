@@ -1,0 +1,12 @@
+%after-line{
+    content: "";
+    width: 50px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-color: $primaryColor;
+    border-radius: 25px;
+}
+

@@ -1,0 +1,11 @@
+.brands{
+    background-color: #f8f8f8;
+    margin-top: 80px;
+    &-content{
+        padding: 50px 0px 50px 0px;
+        .brands-item:hover{
+            transform: scale(1.1);
+            transition: all .3s ease-in-out;
+        }
+    }
+}

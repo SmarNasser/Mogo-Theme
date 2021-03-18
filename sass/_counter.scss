@@ -1,0 +1,27 @@
+.counter{
+    margin-top: 80px;
+    background-color: $secondaryColor;
+    &-item{
+        width: 20%;
+        border-left: 1px solid rgba(255, 255, 255, 0.35);
+        padding: 40px 5px;
+        &:nth-of-type(5){
+            border-right: 1px solid rgba(255, 255, 255, 0.35);
+        }
+        h3{
+            color: white;
+            font: {
+                size: convertFont(65);
+            }
+            margin-bottom: 10px;
+        }
+        p{
+            text-transform: uppercase;
+            color: white;
+            font: {
+                size: convertFont(14);
+                family: 'Montserrat', sans-serif;
+            }
+        }
+    }
+}

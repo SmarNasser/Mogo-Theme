@@ -1,0 +1,82 @@
+.design{
+    padding-top: 80px;
+    background-image: url("../../images/unique-design/bg-unique-design.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    .heading{
+        h3::after{
+            @extend %after-line;
+            // margin-bottom: 20px;
+        }
+    }
+    &-content{
+        position: relative;
+        padding-top: 25px;
+        img{
+            max-width: 100% ;
+        }
+        .tablet{
+            width:380px;
+        }
+        .mobile{
+            position: absolute;
+            top: 38%;
+            right: 22%;
+            width: 170px;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .design{
+        &-content{
+            .mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 578px) and (max-width: 640px){
+    .design{
+        &-content{
+            .mobile {
+                width: 90px;
+                top: 51%;
+                right: 16%;
+            }
+        }
+    }
+}
+
+@media (min-width:641px) and (max-width: 768px){
+    .design{
+        &-content{
+            .mobile {
+                right: 12%;
+            }
+        }
+    }
+} 
+
+@media (min-width: 641px) and (max-width: 992px){
+    .design{
+        &-content{
+            .mobile {
+                top: 41%;
+                width: 110px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .design{
+        &-content{
+            .tablet{
+                width: 250px;
+            }
+        }
+    }
+}

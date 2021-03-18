@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@media (max-width: 800px) {
+    html {
+         font-size: 10px; 
+        }
+  }
+@media (max-width: 400px) {
+    html { 
+        font-size: 7px;
+    }
+}
+
+body{
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    // padding-top: 90px;
+}
+h1, h3, h5, h6 {
+        // margin: 5px 0 10px;
+        // color: #333;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+}
+
+h4{
+    font: {
+        weight: 400;
+        family: 'Kaushan Script', cursive;
+        size: convertFont(20);
+    }
+    margin-bottom: 20px;
+}
+
+p{
+    color: $grey;
+}
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.btn-primary{
+    margin-top: 15px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.btn-primary:hover{
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.heading{
+    position: relative;
+    padding-bottom: 15px;
+}
+.icon{
+    font-size: 30px;
+    margin-right: 20px;
+    color: $secondaryColor;
+}
+
+img{
+    max-width: 100%;
+}
+// .container{
+//     width: 80%;
+//     margin: 0 auto;
+// }
+
+@media (min-width: 420px) and (max-width: 768px){
+    .item-container{
+        max-width: 72%;
+        margin: 0 auto;
+    }
+}
+
+#backTop{
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    outline: none;
+    .fas{
+        font-size: 30px;
+        color: white;
+        background-color: $primaryColor;
+        padding: 10px 15px;
+    }
+}

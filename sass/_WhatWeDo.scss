@@ -1,0 +1,111 @@
+.WhatWeDo{
+    padding-top: 100px;
+    .heading{
+        h3::after{
+            @extend %after-line;
+        }
+    }
+    p {
+        max-width: 750px;
+        text-align: center;
+        padding-top: 25px;
+        margin: 0 auto;
+    }
+    &-content{
+        margin-top: 35px;
+        .WhatWeDo-item{
+            .accordion{
+                .card{
+                    &-body{
+                        height: 190px;
+                        overflow-y: scroll;
+                        text-align: left;
+                        font-weight: 300;
+                    }
+                    .collapse{
+                        padding-right: 15px;
+                    }
+                    &-body::-webkit-scrollbar{
+                        width: 4px;
+                        // border-radius: 25px;
+                        
+                    }
+                    &-body::-webkit-scrollbar-track {
+                        background: #f5f5f5;
+                    }
+                    &-body::-webkit-scrollbar-thumb {
+                        background: $secondaryColor; 
+                    }
+                    .scrollable { 
+                        cursor: pointer; 
+                      }
+                      
+                    &-header{
+                        background-color: white;
+                        cursor: pointer;
+                        h3{
+                            font-size: convertFont(14);
+                            font-weight: 400;
+                            padding: 6px 0px 0px 10px;
+                            position: relative;
+                        }
+                        .mdi{
+                            font-size: convertFont(30);
+                            color: $secondaryColor;
+                            margin-left: 10px;
+                            &-chevron-down,&-chevron-up {
+                                position: absolute;
+                                left: 90%;
+                            }
+                        }
+                        .rotate{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px){
+    .WhatWeDo{
+        &-content{
+            .WhatWeDo-item{
+                .accordion{
+                    .card{
+                        &-header{
+                            .mdi{
+                                font-size: convertFont(30);
+                                color: $secondaryColor;
+                                margin-left: 10px;
+                                &-chevron-down{
+                                    position: absolute;
+                                    left: 87%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 776px){
+    .WhatWeDo{
+        &-content{
+            .WhatWeDo-item{
+                .accordion{
+                    .card{
+                        &-header{
+                            .mdi{
+                                &-chevron-down{
+                                    left: 93%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

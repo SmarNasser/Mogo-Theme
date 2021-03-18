@@ -1,0 +1,49 @@
+.clients{
+    margin-top: 80px;
+    background: {
+        image: url("../../images/happy-client/bg-happy-client.jpg");
+        size: cover;
+        repeat: no-repeat;
+    }
+    .heading{
+        padding-top: 80px;
+        h3::after{
+            @extend %after-line;
+        }
+    }
+    &-content{
+        padding-bottom: 80px;
+        .clients-item{
+            padding-top: 35px;
+            img{
+                border-radius: 50%;
+                height: 70px;
+                margin-right: 30px;
+            }
+            h5{
+                font: {
+                    size: convertFont(15);
+                    weight: 400;
+                }
+            }
+            h6{
+                font: {
+                    style: italic;
+                    weight: 400;
+                    size: convertFont(13);
+                }
+                text-transform: capitalize;
+                color: #999;
+                position: relative;
+                padding-bottom: 10px;
+            }
+            h6::after{
+                @extend %after-line;
+                left: 1%;
+                height: 2px;
+                transform: translateX(-6%);
+
+            }
+        }
+    }
+}

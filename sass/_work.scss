@@ -1,0 +1,77 @@
+.work{
+    padding-top: 80px;
+    .heading{
+        h3::after{
+            @extend %after-line;
+        }
+    }
+    p {
+        max-width: 750px;
+        text-align: center;
+        padding-top: 25px;
+        margin: 0 auto;
+    }
+    &-content{
+        margin-top: 35px;
+        // position: relative;
+        .work-item{
+            position: relative;
+            // .work-overlay{
+            //     position: relative;
+            // }
+            &-hover{
+                position: absolute;
+                opacity: 0;
+                color: white;
+                top: 50%;
+                right: 50%;
+                margin: {
+                    top: -50px;
+                    right: -75px;
+                }
+                font: {
+                    size: 14px;
+                    weight: 400;
+                    family: "Montserrat";
+                }
+                text-align: center;
+                .fas{
+                    display: block;
+                    padding-bottom: 8px;
+                    font: {
+                        size: 30px;
+                    }
+                }
+                p{
+                    color: white;
+                    padding-top: 8px;
+                    font: {
+                        size: 15px;
+                        style: italic;
+                        weight: 300;
+                    }
+
+                }
+            }
+        }
+
+        .work-item:hover{
+            .work-item-hover{
+                opacity: 1;
+                z-index: 1000;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(top, rgba(243,129,129,0.9), rgba(252, 227, 138, 0.9));
+                cursor: pointer;
+                transition: all 300ms ease 0s;
+            }
+        }
+    }
+}
+
